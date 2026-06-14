@@ -1,0 +1,102 @@
+%-------------------------
+% Rover Resume - Base Template
+% Link: https://github.com/subidit/rover-resume
+%
+% Shows code for various formatting options for different resume sections.
+% Education and Projects have single-line headers; while Experience uses double-line.
+% Some formatting codes are kept inline; consider \newcommand{cmd}{def}.
+% Excludes hyperref and icons for readability; MVP version.
+% Explore other templates for more options.
+% Mix and match as desired. Be consistent with headers and sub-headers.
+%------------------------
+
+\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+
+\usepackage[margin=1in, a4paper]{geometry}
+\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty} % remove page number
+\pdfgentounicode=1
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+
+\begin{document}
+
+\begin{center}
+	\begin{minipage}{0.45\textwidth}
+		{\Huge\bfseries
+			Harik Sodhi % Name Here
+		} \\ \medskip
+	\end{minipage} \hfill
+	\begin{minipage}{0.5\textwidth}
+		\raggedleft
+		Email: harik.sodhi@chch.ox.ac.uk \\
+		Mobile: +44 (0) 7799 171770 \\
+		LinkedIn: \href{https://linkedin.com/in/harik-sodhi}{linkedin.com/in/harik-sodhi}\\
+		GitHub: \href{https://github.com/harik-s}{github.com/harik-s}\\
+	\end{minipage}
+\end{center}
+
+\section{Education}
+%=================%
+\subsection{University of Oxford $|$ {\normalfont\itshape MEng Engineering Science} \hfill 2025-2029}
+\begin{itemize}
+	\item \textit{Lab project:} Implemented RK4 integrator for rocket landing dynamics 
+(thrust, drag, gravity); designed proportional controller and optimised 1000-dimensional 
+velocity-height profile for fuel efficiency using constrained optimisation via penalty 
+function (MATLAB Optimization Toolbox), with robustness testing across perturbed 
+initial conditions
+\end{itemize}
+
+\section{Experience}
+%=================%
+\subsection{Oxford Alpha Fund \hfill Oxford}
+\subsubsection{Director \hfill  January 2026 - Present}
+\begin{itemize}
+\item Selected as a Quant Analyst (top \textasciitilde10\% of applicants) via competitive 
+research project and presentation process
+\item Investigated volatility risk premium in short-dated BTC options; identified 
+statistically significant day-of-week effects (Friday $p=0.008$, Sunday $p<0.001$) and 
+constructed systematic straddle strategies achieving Sharpe 1.18 and 70\% win rate \hfill \small\url{github.com/Harik-S/oaf-hilary-2026}
+\item Developed automated tooling to generate sponsor-ready CV books from member CVs, 
+enabling rapid updates during recruitment cycles
+\item Evaluated applications and prepared candidates for internship interviews
+\end{itemize}
+
+\subsection{Optiver Trading Academy \hfill October 2026 - November 2026}
+\subsubsection{Optiver \hfill Oxford}
+\begin{itemize}
+	\item Selected for Optiver's competitive Trading Academy program as a first-year
+	\item Traded ETFs and futures on Optiver's proprietary simulation platform, practising 
+	market making, delta hedging, and risk management under realistic market conditions, finishing with a positive P\&L
+\end{itemize}
+
+\section{Awards \& Honours}
+%===============================%
+\begin{enumerate}[label=\null, left=0pt..0pt, itemsep=0pt]
+	\item Silver Medal, International Physics Olympiad (49th/420 competitors from 89 countries; highest rank in Western Europe) \hfill 2025
+	\item UK International Physics Olympiad Team Member \hfill 2025
+	\item Purple Comet Mathematics Competition — UK National Champion \hfill 2024
+	\item Winner, Berkeley Math Tournament Online Power Round \hfill 2024
+	\item BMO1 Distinction \hfill 2024
+\end{enumerate}
+
+
+\section{Projects}
+\subsection{Market Making Simulator}
+\begin{itemize}
+\item Modelled market making against optimal, suboptimal, and insider trader 
+agents; analysed how player-type composition affects spreads and profitability
+\end{itemize}
+\subsection{DesmosArt}
+\begin{itemize}
+\item Built a Python tool converting arbitrary drawings into parametric equations 
+renderable on Desmos, using image processing and curve fitting
+\end{itemize}
+
+\end{document}
